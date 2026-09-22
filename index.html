@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores para ti 🌷</title>
+  <style>
+   body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('petalos.gif') center/cover no-repeat, linear-gradient(135deg, #fce4ec, #f8bbd0);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .tarjeta {
+      background: #ee7bdb;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 320px;
+      width: 90%;
+    }
+
+    .jardin {
+      position: relative;
+      height: 220px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .tallo {
+      width: 8px;
+      height: 120px;
+      background-color: #4caf50;
+      border-radius: 4px;
+      position: absolute;
+      bottom: 25px;
+      z-index: 1;
+    }
+
+    .hoja {
+      width: 28px;
+      height: 14px;
+      background-color: #66bb6a;
+      position: absolute;
+      border-radius: 14px 0;
+    }
+    .hoja-izq {
+      bottom: 60px;
+      left: 124px;
+      transform: rotate(-30deg);
+    }
+    .hoja-der {
+      bottom: 80px;
+      right: 124px;
+      transform: rotate(30deg) scaleX(-1);
+    }
+
+    .flor {
+      position: absolute;
+      bottom: 130px;
+      width: 80px;
+      height: 80px;
+      z-index: 2;
+      animation: suaveBamboleo 3s ease-in-out infinite alternate;
+    }
+
+    .petalo {
+      position: absolute;
+      width: 32px;
+      height: 50px;
+      background: #ff4081;
+      border-radius: 50%;
+      top: 15px;
+      left: 24px;
+      opacity: 0.9;
+    }
+
+    .p1 { transform: rotate(0deg) translateY(-18px); }
+    .p2 { transform: rotate(60deg) translateY(-18px); }
+    .p3 { transform: rotate(120deg) translateY(-18px); }
+    .p4 { transform: rotate(180deg) translateY(-18px); }
+    .p5 { transform: rotate(240deg) translateY(-18px); }
+    .p6 { transform: rotate(300deg) translateY(-18px); }
+
+    .centro {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background: #ffd54f;
+      border-radius: 50%;
+      top: 27px;
+      left: 27px;
+      box-shadow: 0 0 8px rgba(255, 213, 79, 0.8);
+      z-index: 3;
+    }
+
+    .maceta {
+      width: 60px;
+      height: 45px;
+      background: #d87d4a;
+      clip-path: polygon(10% 100%, 90% 100%, 100% 0%, 0% 0%);
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+    }
+
+    h1 {
+      color: #90023f;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #000000;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin: 10px 0 0 0;
+    }
+
+    @keyframes suaveBamboleo {
+      0% {
+        transform: rotate(-4deg);
+      }
+      100% {
+        transform: rotate(4deg);
+      }
+    }
+
+    .photo {
+        width: 100%;
+        max-width: 220px;         /* Tamaño ideal para que encaje dentro de la tarjeta */
+        height: 220px;
+        object-fit: cover;         /* Evita que la foto se estire o se deforme */
+        border-radius: 16px;
+        border: 4px solid #ffffff; /* Marco blanco tipo foto */
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        display: block;
+        margin: 15px auto 0 auto;  /* Centra la foto y le da separación arriba */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+    .photo:hover {
+        transform: scale(1.04) rotate(1.5deg);
+        box-shadow: 0 12px 24px rgba(255, 64, 129, 0.25);
+        }
+    
+  </style>
+</head>
+<body>
+
+  <div class="tarjeta">
+    <h1><strong>I still don't get how you love me so much.</strong> 🌸</h1>
+    
+    <div class="jardin">
+      <div class="flor">
+        <div class="petalo p1"></div>
+        <div class="petalo p2"></div>
+        <div class="petalo p3"></div>
+        <div class="petalo p4"></div>
+        <div class="petalo p5"></div>
+        <div class="petalo p6"></div>
+        <div class="centro"></div>
+      </div>
+
+      <div class="tallo"></div>
+      <div class="hoja hoja-izq"></div>
+      <div class="hoja hoja-der"></div>
+      <div class="maceta"></div>
+    </div>
+
+    <p>You're the first thing on my mind every morning.</p>
+    <p><Strong>I love you so much, honey </Strong></p>
+    <img src="foto.jpg" alt="foto con el amor de mi vida" class="photo">
+
+    
+
+  </div>
+
+</body>
+</html>
