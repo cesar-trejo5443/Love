@@ -23,6 +23,8 @@
       text-align: center;
       max-width: 320px;
       width: 90%;
+      background: url('petalos.gif') center/cover no-repeat, linear-gradient(135deg, #ff5b91, #eb598c);
+
     }
 
     .jardin {
@@ -75,7 +77,7 @@
       position: absolute;
       width: 32px;
       height: 50px;
-      background: #ff4081;
+      background: #ff0156;
       border-radius: 50%;
       top: 15px;
       left: 24px;
@@ -150,73 +152,92 @@
         transform: scale(1.04) rotate(1.5deg);
         box-shadow: 0 12px 24px rgba(255, 64, 129, 0.25);
         }
-.player-card {
-  width: 180px;
-  margin: 0 auto; /* Centra la tarjeta horizontalmente */
-  background: linear-gradient(145deg, #9b0c94, #7d108b);
-  color: #ffffff;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  box-sizing: border-box;
-}
+    .player-card {
+      width: 180px;
+      margin: 0 auto; /* Centra la tarjeta horizontalmente */
+      background: linear-gradient(145deg, #9b0c94, #7d108b);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      box-sizing: border-box;
+    }
 
-/* Portada del álbum */
-.photo_2 {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  display: block;
-}
+    /* Portada del álbum */
+    .photo_2 {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      display: block;
+    }
 
-.track-info {
-  margin: 8px 0 10px; 
-}
+    .track-info {
+      margin: 8px 0 10px; 
+    }
 
-.title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin: 0;
-  color: #ffffff;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+    .title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin: 0;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-.artist {
-  font-size: 0.68rem;
-  color: #e0d0e8;
-  margin: 2px 0 0;
-}
+    .artist {
+      font-size: 0.68rem;
+      color: #e0d0e8;
+      margin: 2px 0 0;
+    }
 
-.player-card button {
-  background-color: #af0b5d;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 5px 8px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  border-radius: 12px;
-  cursor: pointer;
-  margin: 0 1px;
-  transition: all 0.2s ease-in-out;
-}
+    .player-card button {
+      background-color: #af0b5d;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 5px 8px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      margin: 0 1px;
+      transition: all 0.2s ease-in-out;
+    }
 
-.player-card button:hover {
-  background-color: #ff0080;
-  border-color: #af2c6e;
-  transform: translateY(-2px);
-  box-shadow: 0 3px 8px rgba(250, 1, 125, 0.35);
-}
+    .player-card button:hover {
+      background-color: #c32876;
+      border-color: #af2c6e;
+      transform: translateY(-2px);
+      box-shadow: 0 3px 8px rgba(250, 1, 125, 0.35);
+    }
 
-.player-card button:active {
-  transform: translateY(0);
-}
+    .player-card button:active {
+      transform: translateY(0);
+    }
+
+    .glass-card{
+      max-width: 380px;
+      margin: 20px auto;
+      padding: 20px 24px;
+
+      background: rgba(255, 255, 255, 0.12); 
+      backdrop-filter: blur(12px);          
+      -webkit-backdrop-filter: blur(12px); 
+
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.25); 
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); 
+
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1a1a1a;
+      box-sizing: border-box;
+    }
     
   </style>
 </head>
@@ -241,9 +262,12 @@
       <div class="hoja hoja-der"></div>
       <div class="maceta"></div>
     </div>
-
-    <p>You're the first thing on my mind every morning.☀️</p>
-    <p><Strong>I love you so much, honey ❤️</Strong></p>
+    <div class="glass-card">
+      <p>You're the first thing on my mind every morning.☀️</p>
+    </div>
+    <div class="glass-card">
+      <p><Strong>I love you so much, honey ❤️</Strong></p>
+    </div>
     <img src="foto.jpg" alt="foto con el amor de mi vida" class="photo">
     <br><br>
 
